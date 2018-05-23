@@ -1,0 +1,103 @@
+Occupation;Skill1;Skill2
+Acrobate;DEX;NA
+Agent fédéral ;EDU;NA
+Agriculteur ;EDU;NA
+Aide-soignant ;FOR;NA
+Aliéniste [Classique] ;EDU;NA
+Alpiniste ;FOR;DEX
+Antiquaire [Lovecraftienne] ;EDU;NA
+Archéologue [Lovecraftienne] ;EDU;NA
+Architecte ;EDU;NA
+Arnaqueur;APP;NA
+Artisan ;DEX;NA
+Artiste plasticien ;POU;DEX
+Artiste scénique ;APP;NA
+Athlète ;DEX;FOR
+Avocat ;EDU;NA
+Barman ;APP;NA
+Baroudeur ;DEX;FOR
+Bibliothécaire [Lovecraftienne] ;EDU;NA
+Boxeur/Lutteur ;FOR;NA
+Braqueur de Banque;FOR;DEX
+Cambrioleur;DEX;NA
+Cascadeur ;FOR;DEX
+Chasseur de prime ;DEX;FOR
+Chasseur professionnel ;DEX;FOR
+Chef Mafieux;APP;NA
+Chercheur ;EDU;NA
+Comédien ;APP;NA
+Commerçant ;APP;DEX
+Comptable;EDU;NA
+Conducteur ;DEX;NA
+Conservateur ;EDU;NA
+Contrebandier;DEX;NA
+Correspondant ;EDU;NA
+Cow-boy ;DEX;FOR
+Criminel Indépendant;DEX;APP
+Croque-mort ;EDU;NA
+Déprogrammeur [Moderne] ;EEDU;NA
+Détective d’agence ;FOR;DEX
+Détective privé ;DEX;FOR
+Dilettante [Lovecraftienne] ;APP;NA
+Domestique;EDU;NA
+Dresseur ;APP;POU
+Écrivain [Lovecraftienne] ;EDU;NA
+Éditeur ;EDU;NA
+Employé ;EDU;NA
+Espion ;APP;DEX
+Étudiant/Stagiaire ;EDU;NA
+Explorateur [Classique] ;APP;FOR
+Fanatique ;APP;POU
+Faussaire;EDU;NA
+Frangine;APP;NA
+Gardien de zoo ;EDU;NA
+Gentilhomme/Dame ;APP;NA
+Gourou ;APP;NA
+Hobo;APP;DEX
+Homme politique ;APP;NA
+Infirmier ;EDU;NA
+Informaticien [Moderne] ;EDU;NA
+Joueur professionnel ;APP;DEX
+Journaliste [Lovecraftienne] ;EDU;NA
+Juge ;EDU;NA
+Laborantin ;EDU;NA
+Libraire ;EDU;NA
+Mafieux;DEX;FOR
+Marchand d’antiquités ;EDU;NA
+Marin ;DEX;FOR
+Mécanicien ;EDU;NA
+Médecin [Lovecraftienne];EDU;NA
+Médecin légiste ;EDU;NA
+Missionnaire ;APP;NA
+Musicien;APP;DEX
+Occultiste [Lovecraftienne] ;EDU;NA
+Officier ;DEX;FOR
+Ouvrier ;DEX;FOR
+Parapsychologue ;EDU;NA
+Petite Frappe;DEX;FOR
+Pharmacien ;EDU;NA
+Photographe ;EDU;NA
+Pilote/Aviateur ;EDU;FOR
+Plongeur ;DEX;NA
+Policier/Inspecteur [Lovecraftienne] ;DEX;FOR
+Pompier ;DEX;FOR
+Professeur [Lovecraftienne] ;EDU;NA
+Prospecteur ;DEX;FOR
+Prostituée ;APP;NA
+Psychiatre ;EDU;NA
+Psychologue/Psychanalyste ;EDU;NA
+Receleur;APP;NA
+Religieux ;EDU;NA
+Routier;DEX;FOR
+Sauvage ;DEX;FOR
+Scientifique ;EDU;NA
+Secrétaire ;DEX;APP
+Serveuse ;DEX;APP
+Soldat ;DEX;FOR
+Styliste ;EDU;NA
+Surveillant d’asile ;FOR;DEX
+Syndicaliste ;EDU;NA
+Trafiquant;FOR;NA
+Tueur à Gage;DEX;FOR
+Vagabond ;APP;DEX
+Vendeur ;APP;NA

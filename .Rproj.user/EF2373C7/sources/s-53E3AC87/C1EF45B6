@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527090522172.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C1EF45B6",
+    "lastKnownWriteTime" : 2482448084909518882,
+    "last_content_update" : 1527090522172,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "2443DCED",
+        "caption" : "occupation",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=occupation&cache_key=2443DCED",
+        "displayedObservations" : "102",
+        "environment" : "",
+        "object" : "occupation",
+        "preview" : "0",
+        "totalObservations" : "102",
+        "variables" : "3"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
