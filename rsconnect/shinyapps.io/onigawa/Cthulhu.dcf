@@ -5,8 +5,8 @@ account: onigawa
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 347685
-bundleId: 1389305
+bundleId: 1392415
 url: https://onigawa.shinyapps.io/Cthulhu/
-when: 1527089759.63459
+when: 1527231653.46154
 asMultiple: FALSE
 asStatic: FALSE

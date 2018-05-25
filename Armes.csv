@@ -1,0 +1,79 @@
+Name;Base;Damage;Range;Attacks per round;Ammo;Resistance;Cost;Mal;Era;Category
+Punch / Fist;50;1d3+IMP;-;1    ;-;-;-;-;all;Unarmed
+HeaIMPutt;10;1D4+IMP;-;1    ;-;-;-;-;all;Unarmed
+Kick;25;1D6;-;1    ;-;-;-;-;all;Unarmed
+Rapier / Heavy Epee;10;1D6+1+IMP;touch;1    ;-;15;-;-;all;Hand to Hand Weapons
+Cavalier Sabre;15;1D8+1+IMP;touch;1    ;-;20;-;-;all;Hand to Hand Weapons
+Cavalry Lance;10;1D8+1+1D6;touch;1    ;-;15;-;-;all;Hand to Hand Weapons
+Wood Axe;20;1D8+2+IMP;touch;1    ;-;15;03/05/10;-;all;Hand to Hand Weapons
+Hatchet / Sickle;20;1D6+1+IMP;touch;1    ;-;12;02/05/09;-;all;Hand to Hand Weapons
+Fighting Knife (dirk, ect.);25;1D4+2+IMP;touch;1    ;-;15;01/02/15;-;all;Hand to Hand Weapons
+Butcher Knife;25;1D6+IMP;touch;1    ;-;23;01/02/07;-;all;Hand to Hand Weapons
+Small Knife (switchblade, ect.);25;1D4+IMP;touch;1    ;-;9;.5/2/6;-;all;Hand to Hand Weapons
+Blackjack (cosh, life-preserver);40;1D8+IMP;touch;1    ;-;4;.6/2/15;-;all;Hand to Hand Weapons
+Large Club / Cricket Bat / Poker;25;1D8+IMP;touch;1    ;-;20;01/03/35;-;all;Hand to Hand Weapons
+Small Club / Nightstick;25;1D6+IMP;touch;1    ;-;15;01/03/35;-;all;Hand to Hand Weapons
+Garrote;15;strangle;touch;1    ;-;1;.2/.5//3;-;all;Hand to Hand Weapons
+Bullwhip;5;1D3 or grapple;10 feet;1    ;-;4;02/05/50;-;1890s, 1920s;Hand to Hand Weapons
+War Boomerang;Throw%;1D8;see Throw; 1/2;-;8;01/02/40;-;rare;Hand to Hand Weapons
+Thrown Rock;Throw%;1D4;see Throw;1    ;-;-;-;-;all;Hand to Hand Weapons
+Thrown Spear;Throw%;1D8+1;See Throw;1    ;-;15;01/01/25;-;rare;Hand to Hand Weapons
+Quoit;25;1D6+1+1/2IMP;Throw%;1    ;-;15;.05;-;all;Hand to Hand Weapons
+Burning Torch;10+cloth fire%;1D6;touch;1    ;-;15;.05;-;all;Hand to Hand Weapons
+Taser (dart);20;stun;Dex in feet (max 14);1    ;varies;8;00;95;present;Hand to Hand Weapons
+Taser (contact);Fist / Punch%;stun;touch;1    ;varies;7;00;97;present;Hand to Hand Weapons
+Mace;Dex x5;stun 2D10 mins;1/2 Dex in feet;1    ;25 squirts;4;10;0;present;Hand to Hand Weapons
+Live Wire, 110-volt Charge;Elec. Repair%;1D8 + stun;touch;1    ;-;6, fuse box;-;-;1920s, present;Hand to Hand Weapons
+Live Wire, 220-volt Charge;Elec. Repair%;1D8 + stun;touch;1    ;-;6, fuse box;-;-;present;Hand to Hand Weapons
+Chainsaw;20%;2D8;touch;1    ;-;20;300;97;present;Hand to Hand Weapons
+Flintlock Pistol;20;1D6+6;10 yards; 1/2;1;8;15/30/300;95;rare;Hand Guns
+.22 Short Auto;20;1D6+1;10 yards;3    ;6;6;25/190;0;1920s, present;Hand Guns
+.25 Derringer;20;1D6;3 yards;1    ;1;5;04/12/55;0;1890s, 1920s;Hand Guns
+.32 or 7.65mm Revolver;20;1D8;15 yards;3    ;6;10;6/15/200;0;all;Hand Guns
+.32 or 7.65 Automatic;20;1D8;15 yards;3    ;8;8;20/300;99;1920s, present;Hand Guns
+357 Magnum Revolver;20;1D8+1D4;20 yards;1    ;6;11;425;0;present;Hand Guns
+.38 or 9mm Revolver;20;1D10;15 yards;2    ;6;10;8/25/200;0;all;Hand Guns
+.38 Automatic;20;1D10;15 yards;2    ;6;8;30/375;99;1920s, present;Hand Guns
+Glock 17 9mm Auto;20;1D10;20 yards;3    ;17;8;500;98;present;Hand Guns
+Model P08 Luger;20;1D10;20 yards;3    ;17;8;500;98;present;Hand Guns
+.41 Revolver;20;1D10;15 yards;1    ;6;10;20;0;1890s;Hand Guns
+.44 Magnum Revolver;15;2D6+2;30 yards;1    ;6;12;475;0;present;Hand Guns
+.45 Revolver;20;1D10+2;15 yards;1    ;6;10;10/30/300;0;all;Hand Guns
+.45 Automatic;20;1D10+2;15 yards;1    ;7;8;40/375;0;1920s, present;Hand Guns
+IMI Desert Eagle;20;2D6+2;30 yards;1    ;7;9;650;94;present;Hand Guns
+AK-47 or AKM;25;2D6+1;90 yards;2 or burst;30;12;200;0;present;Assault Rifles
+AK-74;25;2D8;120 yards;2 or burst;30;12;1000;97;present;Assault Rifles
+Barrett Model 82;25;2D10+4;210 yards;1    ;11;12;3000;96;present;Assault Rifles
+FN FAL;25;2D6+3;110 yards;1 or burst;20;11;1500;97;present;Assault Rifles
+Galil AR;25;2D6+3;110 yards;1 or burst;20;12;2000;98;present;Assault Rifles
+M16A2;25;2D8;130 yards;1 or burst of 3;30;11;-;97;present;Assault Rifles
+Steyr AUG;25;2D6;120 yards;1 or burst;30;12;1100;99;present;Assault Rifles
+Beretta M70/90;25;2D6;120 yards;1/3 or burst;30;12;2800;99;present;Assault Rifles
+Thompson;15;1D10+2;20 yards;1 or burst;20/30/50;8;-;96;1920s;Submachine Guns
+Heckler & Koch MP5;15;1D10;45 yards;2 or burst;15/30;10;-;97;present;Submachine Guns
+Ingram MAC-11;15;1D8;20 yards;3 or burst;32;6;750;96;present;Submachine Guns
+Skorpion SMG;15;1D8;20 yards;3 or burst;32;6;750;96;present;Submachine Guns
+Uzi SMG;15;1D10;40 yards;2 or burst;32;8;1000;98;present;Submachine Guns
+Model 1882 Gatling Gun;15;2D6+4;100 yards;burst;200;20;1000/2000/650;96;1890s;Machine Guns
+Browning Aut. Rifle M1918;15;2D6+4;90 yards;1/2 or burst;20;11;-/800;0;1920s;Machine Guns
+.30 Browning M1917A1, belt-fed;15;2D6+3;150 yards;burst;250;12;-/3000/-;96;1920s;Machine Guns
+Maschinengewehr 42 7.92mm, belt-fed;15;2D6+4;200 yards;burst;300;18;rare;0;rare;Machine Guns
+FN Minimi, 5.56mm, clip/belt;15;2D8;130 yards;burst;30/200;11;-;99;present;Machine Guns
+Moltov Cocktail;Throw %;2D6+Luck;thrown; 1/2;1 only;1;-;95;1920s, present;Explosive, Heavy Weapons
+Signal Pistol/ Flare Gun;25;1D10+1D3;10; 1/2;1;11;10/15/75;0;all;Explosive, Heavy Weapons
+M79 Grenade Launcher;25;3D6 /2y;20; 1/2;1;12;-;99;present;Explosive, Heavy Weapons
+Dynamite Stick;Throw %;5D6 /2y;thrown; 1/2;1 only;1;01/02/05;99;all;Explosive, Heavy Weapons
+Blasting Cap;Elec. Repair %;2D6 /1y;-;-;one use;3;$20/box;0;all;Explosive, Heavy Weapons
+Pipe Bomb;Elec. Repair %;4D6 /3y;in place;one use;1 only;3;-;95;all;Explosive, Heavy Weapons
+Plastique (C-4), 4 oz.;Elec. Repair %;6d6 /3y;in place;one use;1 only;15;-;99;present;Explosive, Heavy Weapons
+Hand Grenade;Throw %;4D6 /4y;thrown; 1/2;1 only;8;-;99;1920s, present;Explosive, Heavy Weapons
+81mm Mortar;1;6D6 /6y;500 yards;2    ;separate;10;-;0;present;Explosive, Heavy Weapons
+75mm Field Gun;1;10D6 /2y;500 yards; 1/2;separate;40;3000/1500/-;99;1920s, present;Explosive, Heavy Weapons
+120mm Tank Gun, stabilized;1;15D6 /4y;2000 yards;1    ;separate;35;-;0;present;Explosive, Heavy Weapons
+Ship-mounted 5-inch Rifle, stblzd.;1;12D6 /4y;3000;2    ;auto-mgzn;50;-;98;present;Explosive, Heavy Weapons
+AP Mine;Conceal% +Luck;4D6 /5y;in place;in place;one use;9;-;99;1920s, present;Explosive, Heavy Weapons
+Claymore Mine;luck roll;6D6+6/3D6+2/1D6;10/25/50 yds;in place;one use;12;-;99;present;Explosive, Heavy Weapons
+Flamethrower;5;2D6 + sock;25 yards;1    ;>= 10;6;-;93;1920s, present;Explosive, Heavy Weapons
+GE Mini-gun;15;2D6+4;400 yards;33    ;4000;14;-;98;present;Explosive, Heavy Weapons
+LAW;15;8D6 /1y;150 yards;1    ;1;10;-;98;present;Explosive, Heavy Weapons
+Jungle Hunting Bow;1;1D6 + IMP;30 yards;1    ;1;6;-;90;1890s;Explosive, Heavy Weapons

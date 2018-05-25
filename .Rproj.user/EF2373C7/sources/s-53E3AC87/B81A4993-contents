@@ -1,0 +1,11 @@
+1 5
+2 6
+3 7
+4 8
+res<-NULL
+for(i in seq(1, length(bla), by = 4)){
+  temp<-data.frame(chiffre=bla[i],homme=bla[i+1],femme=bla[i+2],famille=bla[i+3])
+  res<-rbind(res,temp)
+}
+res$chiffre<-NULL
+
