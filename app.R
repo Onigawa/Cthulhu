@@ -4,8 +4,11 @@ require(stringr)
 require(DT)
 require(staplr)
 require(hms)
-require(animation)
-#staplr for pdf form fill up (must install some software so not shiny)
+require(animation) #to load pdf reader software
+#Pictures 
+#Skills check
+
+
 
 rollDice<-function(dice=6,nbr=1,sum=F){
   res<-sample(1:dice, nbr, replace=T)
@@ -18,6 +21,9 @@ names<-read.csv2(file = "Names.csv",encoding = "ANSI")
 attache<-read.csv2(file = "Attaches.csv",encoding = "ANSI")
 armes<-read.csv2(file = "Armes.csv",encoding = "ANSI")
 fieldsbase<-get_fields(input_filepath = "fichebase.pdf")
+codepdf<-read.csv2(file = "CodePDF.csv",encoding = "ANSI")
+
+
 fichesession<-{
   time<-Sys.time()
   time<-str_remove_all(as.hms(time),pattern = ":")
@@ -101,7 +107,11 @@ ui <- dashboardPage(
                   )
               ),
               box(title = "Skills",width=6,
-                  tableOutput(outputId = "SkillTable")
+                  tableOutput(outputId = "SkillTable"),
+                  checkboxInput(inputId = "SkillOnly",label = "Only Available Skill",value = T),
+                  selectInput(inputId = "SkillChoose",label = "What Skill ?",choices = "Placeholder" ),
+                  numericInput(inputId = "SkillValue",label = "Skill Value",value = 0,min = 0,max = 100),
+                  actionButton(inputId = "SkillValueSave",label = "Validate")
               )
               
       ),
@@ -462,6 +472,17 @@ server <- function(input, output,session) {
   },digits = 1)
   
   output$SkillTable<-renderTable(expr = {str_to_title(strsplit(as.character(occupation[occupation$Occupation==input$Occupation,"Skills"]),", ")[[1]])},colnames = F)
+  
+  observeEvent({input$Occupation
+    input$SkillOnly},{
+    if(input$SkillOnly){
+      updateSelectInput(session = session,inputId ='SkillChoose',choices ={str_to_title(strsplit(as.character(occupation[occupation$Occupation==input$Occupation,"Skills"]),", ")[[1]])}  ) 
+    }else{
+      updateSelectInput(session = session,inputId ='SkillChoose',choices ={str_to_title(codepdf$Name)}  ) 
+    }
+    
+  })
+  
   
   observeEvent(input$Recommanded,{
     if(input$Recommanded){

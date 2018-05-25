@@ -1,103 +1,103 @@
-Occupation;Skill1;Skill2;Credit_Min;Credit_Max;Skills
-Acrobate;DEX;NA;9;20;esquive, grimper, lancer, nager, sauter, trouver objet cache, deux competences joker
-Agent federal ;EDU;NA;20;40;combat a distance, combat rapproche (corps a corps), conduite, discretion, droit, persuasion, trouver objet cache, une competence joker
-Agriculteur ;EDU;NA;9;30;arts et metiers (agriculture), conduite, conduite d'attelage, conduite engin lourd, mecanique, naturalisme, pister, une competence sociale , une competence joker 
-Aide-soignant ;FOR;NA;6;15;combat rapproche (corps a corps), discretion, ecouter, electricite, mecanique, premiers soins, psychologie, une competence sociale  
-Alieniste [Classique] ;EDU;NA;10;60;droit, ecouter, langues, medecine, psychanalyse, psychologie, sciences (biologie), sciences (chimie)
-Alpiniste ;FOR;DEX;30;60;ecouter, grimper, langues, orientation, pister, premiers soins, sauter, survie (montagne, un autre terrain approprie) 
-Antiquaire [Lovecraftienne] ;EDU;NA;30;70;arts et metiers , bibliotheque, estimation, histoire, langues, trouver objet cache, une competence sociale , une competence joker
-Archeologue [Lovecraftienne] ;EDU;NA;10;40;archeologie, bibliotheque, estimation, histoire, langues , mecanique, orientation, sciences (chimie, physique, geologie, etc.), trouver objet cache 
-Architecte ;EDU;NA;30;70;arts et metiers (dessin technique), comptabilite, droit, informatique, bibliotheque, langue maternelle, persuasion, psychologie, sciences (mathematiques) 
-Arnaqueur;APP;NA;10;65;arts et metiers (comedie), droit, langues, ecouter, estimation, pickpocket, psychologie, deux competences sociales  
-Artisan ;DEX;NA;10;40;arts et metiers (deux au choix), comptabilite, mecanique, naturalisme, trouver objet cache, deux competences joker
-Artiste plasticien ;POU;DEX;9;50;arts et metiers , histoire, naturalisme, langues, psychologie, trouver objet cache, une competence sociale , deux competences joker 
-Artiste scenique ;APP;NA;9;70;arts et metiers (comedie, chant, humour, etc.), ecouter, imposture, psychologie, deux competences sociales , deux competences joker 
-Athlete ;DEX;FOR;9;70;combat rapproche (corps a corps), equitation, grimper, lancer, nager, sauter, une competence sociale , une competence joker
-Avocat ;EDU;NA;30;80;bibliotheque, comptabilite, droit, psychologie, deux competences sociales , deux competences joker
-Barman ;APP;NA;8;25;combat rapproche (corps a corps), comptabilite, ecouter, psychologie, trouver objet cache, deux competences sociales , une competence joker 
-Baroudeur ;DEX;FOR;5;20;combat a distance, ecouter, naturalisme, orientation, pister, premiers soins, survie , trouver objet cache
-Bibliothecaire [Lovecraftienne] ;EDU;NA;9;35;bibliotheque, comptabilite, langue maternelle, langues, quatre competences au choix correspondant a des specialites personnelles, des lectures specifiques
-Boxeur/Lutteur ;FOR;NA;9;60;combat rapproche (corps a corps), esquive, intimidation, psychologie, sauter, trouver objet cache, deux competences joker
-Braqueur de Banque;FOR;DEX;5;75;combat a distance, combat rapproche, conduite engin lourd, conduite, crochetage, electricite, mecanique, intimidation, une competence joker 
-Cambrioleur;DEX;NA;5;40;crochetage, discretion, ecouter, electricite, mecanique, estimation, grimper, pickpocket, trouver objet cache
-Cascadeur ;FOR;DEX;10;50;combat rapproche, electricite, mecanique, esquive, grimper, nager, premiers soins, sauter, une competence parmi : conduite, equitation, pilotage , plongee
-Chasseur de prime ;DEX;FOR;9;30;combat rapproche, combat a distance, conduite, discretion, droit, electronique, electricite, pister, psychologie, une competence sociale  
-Chasseur professionnel ;DEX;FOR;20;50;combat a distance, discretion, ecouter, trouver objet cache, langues, survie , naturalisme, orientation, pister, sciences (biologie, botanique)
-Chef Mafieux;APP;NA;60;95;combat a distance, combat rapproche, droit, ecouter, psychologie, trouver objet cache, deux competences sociales 
-Chercheur ;EDU;NA;9;30;bibliotheque, histoire, langues, trouver objet cache, une competence sociale , trois champs de recherche 
-Comedien ;APP;NA;9;90;arts et metiers (comedie), combat rapproche, histoire, imposture, psychologie, deux competences sociales , une competence joker
-Commerçant ;APP;DEX;20;40;comptabilite, ecouter, electricite, mecanique, psychologie, trouver objet cache, deux competences sociales  
-Comptable;EDU;NA;30;70;bibliotheque, comptabilite, droit, ecouter, persuasion, trouver objet cache, deux competences joker (comme informatique)
-Conducteur ;DEX;NA;10;40;conduite, ecouter, mecanique, orientation, trouver objet cache, deux competences sociales , une competence joker
-Conservateur ;EDU;NA;10;30;archeologie, bibliotheque, comptabilite, estimation, histoire, langues, occultisme, trouver objet cache
-Contrebandier;DEX;NA;5;40;combat a distance, conduite, pilotage (avions, bateaux), ecouter, orientation, pickpocket, psychologie, trouver objet cache, une competence sociale  
-Correspondant ;EDU;NA;10;40;ecouter, histoire, langue maternelle, langues, psychologie, deux competences sociales , une competence joker
-Cow-boy ;DEX;FOR;9;20;combat rapproche, combat a distance, equitation, esquive, lancer, pister, premiers soins, naturalisme, sauter, survie 
-Criminel Independant;DEX;APP;5;65;arts et metiers (comedie), imposture, combat rapproche, combat a distance, crochetage, mecanique, discretion, estimation, psychologie, trouver objet cache, une competence sociale 
-Croque-mort ;EDU;NA;20;40;comptabilite, conduite, histoire, occultisme, psychologie, sciences (biologie), sciences (chimie), une competence sociale 
-Deprogrammeur [Moderne] ;EEDU;NA;20;50;combat rapproche (corps a corps), combat a distance, conduite, discretion, histoire, occultisme, psychologie, deux competences sociales 
-Detective d'agence ;FOR;DEX;20;45;bibliotheque, combat a distance, combat rapproche (corps a corps), discretion, droit, pister, psychologie, une competence sociale 
-Detective prive ;DEX;FOR;9;30;arts et metiers (photographie), bibliotheque, droit, imposture, psychologie, trouver objet cache, une competence sociale , une competence joker 
-Dilettante [Lovecraftienne] ;APP;NA;50;99;arts et metiers , combat a distance, equitation, langues, une competence sociale , trois competences joker
-Domestique;EDU;NA;9;40;arts et metiers (cuisine, confection, barbier, etc.), comptabilite, estimation, ecouter, langues, premiers soins, psychologie, trouver objet cache, deux competences joker 
-Dresseur ;APP;POU;10;40;discretion, ecouter, naturalisme, pister, psychologie, sauter, sciences (zoologie), une competence joker 
-ecrivain [Lovecraftienne] ;EDU;NA;9;30;arts et metiers (litterature), bibliotheque, histoire, langue maternelle, langues, naturalisme, occultisme, psychologie, une competence joker
-editeur ;EDU;NA;10;30;comptabilite, histoire, langue maternelle, psychologie, trouver objet cache, deux competences sociales , une competence joker
-Employe ;EDU;NA;9;80;bibliotheque, informatique, comptabilite, droit, ecouter, langues, une competence sociale , deux competences joker
-Espion ;APP;DEX;20;60;arts et metiers (comedie), imposture, combat a distance, discretion, ecouter, langues, pickpocket, psychologie, deux competences sociales 
-etudiant/Stagiaire ;EDU;NA;5;10;bibliotheque, ecouter, langues, langue maternelle, trois champs d'etude, deux competences joker
-Explorateur [Classique] ;APP;FOR;55;80;combat a distance, grimper, nager, histoire, langues, naturalisme, orientation, sauter, survie  
-Fanatique ;APP;POU;0;30;discretion, histoire, psychologie, deux competences sociales , trois competences joker
-Faussaire;EDU;NA;20;60;arts et metiers (contrefaçon), bibliotheque, comptabilite, estimation, histoire, pickpocket, trouver objet cache, une competence joker
-Frangine;APP;NA;10;80;arts et metiers , combat rapproche (corps a corps), combat a distance (armes de poing), conduite, discretion, ecouter, deux competences sociales , une competence joker
-Gardien de zoo ;EDU;NA;9;40;comptabilite, dressage, esquive, medecine, naturalisme, premiers soins, sciences (pharmacologie), sciences (zoologie)
-Gentilhomme/Dame ;APP;NA;40;90;arts et metiers , combat a distance (fusils), equitation, histoire, langues , orientation, deux competences sociales 
-Gourou ;APP;NA;30;60;comptabilite, occultisme, psychologie, trouver objet cache, deux competences sociales , deux competences joker
-Hobo;APP;DEX;0;5;arts et metiers , crochetage, pickpocket, discretion, ecouter, grimper, orientation, sauter, une competence joker 
-Homme politique ;APP;NA;50;90;baratin, charme, ecouter, histoire, intimidation, langue maternelle, persuasion, psychologie
-Infirmier ;EDU;NA;9;30;ecouter, medecine, premiers soins, psychologie, sciences (biologie), sciences (chimie), trouver objet cache, une competence sociale  
-Informaticien [Moderne] ;EDU;NA;10;70;bibliotheque, electricite, electronique, informatique, trouver objet cache, une competence sociale , deux competences joker
-Joueur professionnel ;APP;DEX;8;50;arts et metiers (comedie), comptabilite, ecouter, pickpocket, psychologie, trouver objet cache, deux competences sociales 
-Journaliste [Lovecraftienne] ;EDU;NA;9;30;arts et metiers (art, photographie), bibliotheque, histoire, langue maternelle, psychologie, une competence sociale , deux competences joker.
-Juge ;EDU;NA;50;80;bibliotheque, droit, ecouter, histoire, intimidation, langue maternelle, persuasion, psychologie
-Laborantin ;EDU;NA;10;30;electricite, informatique, bibliotheque, langues, sciences (chimie et deux autres), trouver objet cache, une competence joker
-Libraire ;EDU;NA;20;40;comptabilite, estimation, conduite, histoire, bibliotheque, langue maternelle, langues, une competence sociale 
-Mafieux;DEX;FOR;9;20;combat a distance, combat rapproche, conduite, psychologie, deux competences sociales , deux competences joker
-Marchand d'antiquites ;EDU;NA;30;50;bibliotheque, comptabilite, conduite, estimation, histoire, orientation, deux competences sociales 
-Marin ;DEX;FOR;9;40;mecanique, nager, naturalisme, orientation, pilotage (bateaux), premiers soins, trouver objet cache, une competence sociale 
-Mecanicien ;EDU;NA;9;40;arts et metiers (charpenterie, soudure, plomberie, etc.), conduite engin lourd, conduite, electricite, grimper, mecanique, deux competences joker
-Medecin [Lovecraftienne];EDU;NA;30;80;langues (latin), medecine, premiers soins, psychologie, sciences (biologie et pharmacologie), deux competences joker
-Medecin legiste ;EDU;NA;40;60;bibliotheque, langues (latin), medecine, persuasion, sciences (biologie), sciences (criminalistique), sciences (pharmacologie), trouver objet cache
-Missionnaire ;APP;NA;0;30;arts et metiers , mecanique, medecine, naturalisme, premiers soins, une competence sociale , deux competences joker
-Musicien;APP;DEX;9;30;arts et metiers (instrument), ecouter, psychologie, une competence sociale , quatre competences joker
-Occultiste [Lovecraftienne] ;EDU;NA;9;65;anthropologie, bibliotheque, histoire, langues, occultisme, sciences (astronomie), une competence sociale , une competence joker 
-Officier ;DEX;FOR;20;70;combat a distance, comptabilite, orientation, premiers soins, psychologie, deux competences sociales , une competence joker
-Ouvrier ;DEX;FOR;9;30;combat rapproche, conduite engin lourd, conduite, electricite, lancer, mecanique, premiers soins, une competence joker
-Parapsychologue ;EDU;NA;9;30;anthropologie, arts et metiers (photographie), bibliotheque, histoire, langues, occultisme, psychologie, une competence joker
-Petite Frappe;DEX;FOR;3;10;combat a distance, combat rapproche, discretion, grimper, lancer, pickpocket, sauter, une competence sociale 
-Pharmacien ;EDU;NA;35;75;bibliotheque, comptabilite, langues (latin), premiers soins, psychologie, sciences (chimie), sciences (pharmacologie), une competence sociale 
-Photographe ;EDU;NA;9;30;arts et metiers (photographie), discretion, psychologie, sciences (chimie), trouver objet cache, une competence sociale , deux competences joker
-Pilote/Aviateur ;EDU;FOR;20;70;comptabilite, ecouter, electricite, mecanique, orientation, pilotage (avions), trouver objet cache, une competence joker 
-Plongeur ;DEX;NA;9;30;mecanique, nager, pilotage (bateaux), plongee, premiers soins, sciences (biologie), trouver objet cache, une competence joker
-Policier/Inspecteur [Lovecraftienne] ;DEX;FOR;20;70;arts et metiers (comedie), imposture, combat a distance, droit, ecouter, psychologie, trouver objet cache, une competence sociale , une competence joker.
-Pompier ;DEX;FOR;9;30;conduite engin lourd, conduite, esquive, grimper, lancer, mecanique, premiers soins, sauter
-Professeur [Lovecraftienne] ;EDU;NA;20;70;bibliotheque, langue maternelle, langues, psychologie, quatre competences joker
-Prospecteur ;DEX;FOR;0;10;grimper, histoire, mecanique, orientation, premiers soins, sciences (geologie), trouver objet cache, une competence joker
-Prostituee ;APP;NA;5;50;arts et metiers , discretion, esquive, pickpocket, psychologie, deux competences sociales , une competence joker 
-Psychiatre ;EDU;NA;30;80;ecouter, langues, medecine, persuasion, psychanalyse, psychologie, sciences (biologie), sciences (chimie)
-Psychologue/Psychanalyste ;EDU;NA;10;40;bibliotheque, comptabilite, ecouter, persuasion, psychanalyse, psychologie, deux competences joker
-Receleur;APP;NA;20;40;arts et metiers (contrefaçon), bibliotheque, comptabilite, estimation, histoire, trouver objet cache, une competence sociale , une competence joker
-Religieux ;EDU;NA;9;60;bibliotheque, comptabilite, ecouter, histoire, langues, psychologie, une competence sociale , une competence joker
-Routier;DEX;FOR;9;20;comptabilite, conduite, ecouter, mecanique, orientation, psychologie, une competence sociale , une competence joker
-Sauvage ;DEX;FOR;0;15;combat rapproche, lancer, ecouter, grimper, nager, naturalisme, occultisme, survie , trouver objet cache
-Scientifique ;EDU;NA;9;50;informatique, bibliotheque, langue maternelle, langues, trouver objet cache, une competence sociale , trois specialites scientifiques
-Secretaire ;DEX;APP;9;30;arts et metiers (taper a la machine, dactylographie), bibliotheque, informatique, comptabilite, langue maternelle, psychologie, deux competences sociales , une competence joker 
-Serveuse ;DEX;APP;9;20;arts et metiers , comptabilite, ecouter, esquive, psychologie, deux competences sociales , une competencejoker
-Soldat ;DEX;FOR;9;30;combat a distance, combat rapproche, discretion, esquive, grimper, nager, survie, deux competences parmi : langues, mecanique, premiers soins
-Styliste ;EDU;NA;20;60;arts et metiers , arts et metiers (photographie), comptabilite, informatique, bibliotheque, mecanique, psychologie, trouver objet cache, une competence joker
-Surveillant d'asile ;FOR;DEX;8;20;combat rapproche (corps a corps), discretion, ecouter, esquive, premiers soins, psychologie, deux competences sociales 
-Syndicaliste ;EDU;NA;5;30;combat rapproche (corps a corps), comptabilite, conduite engin lourd, droit, ecouter, psychologie, deux competences sociales 
-Trafiquant;FOR;NA;5;30;combat a distance, combat rapproche (corps a corps), conduite, discretion, psychologie, trouver objet cache, deux competences sociales 
-Tueur a Gage;DEX;FOR;30;60;combat a distance, combat rapproche, crochetage, discretion, electricite, imposture, mecanique, psychologie
-Vagabond ;APP;DEX;0;5;discretion, ecouter, grimper, orientation, sauter, une competence sociale , deux competences joker
-Vendeur ;APP;NA;9;40;comptabilite, conduite, discretion, pickpocket, ecouter, psychologie, deux competences sociales , une competence joker
+Occupation;Skill1;Skill2;Credit_Min;Credit_Max;Skills;Comments
+Acrobate;DEX;NA;9;20;esquive, grimper, lancer, nager, sauter, trouver objet cache, deux competences joker;
+Agent federal ;EDU;NA;20;40;combat a distance, combat rapproche, conduite, discretion, droit, persuasion, trouver objet cache, une competence joker;(corps a corps)
+Agriculteur ;EDU;NA;9;30;arts et metiers, conduite, conduite d'attelage, conduite engin lourd, mecanique, naturalisme, pister, une competence sociale, une competence joker ;(agriculture)
+Aide-soignant ;FOR;NA;6;15;combat rapproche, discretion, ecouter, electricite, mecanique, premiers soins, psychologie, une competence sociale  ;(corps a corps)
+Alieniste [Classique] ;EDU;NA;10;60;droit, ecouter, langues, medecine, psychanalyse, psychologie, sciences ;(biologie)(chimie)
+Alpiniste ;FOR;DEX;30;60;ecouter, grimper, langues, orientation, pister, premiers soins, sauter, survie; (montagne, un autre terrain approprie) 
+Antiquaire [Lovecraftienne] ;EDU;NA;30;70;arts et metiers, bibliotheque, estimation, histoire, langues, trouver objet cache, une competence sociale, une competence joker;
+Archeologue [Lovecraftienne] ;EDU;NA;10;40;archeologie, bibliotheque, estimation, histoire, langues, mecanique, orientation, sciences, trouver objet cache ;(chimie, physique, geologie, etc.)
+Architecte ;EDU;NA;30;70;arts et metiers, comptabilite, droit, informatique, bibliotheque, langue maternelle, persuasion, psychologie, sciences;(dessin technique)  (mathematiques)
+Arnaqueur;APP;NA;10;65;arts et metiers, droit, langues, ecouter, estimation, pickpocket, psychologie, deux competences sociales  ;(comedie)
+Artisan ;DEX;NA;10;40;arts et metiers, comptabilite, mecanique, naturalisme, trouver objet cache, deux competences joker;(deux au choix)
+Artiste plasticien ;POU;DEX;9;50;arts et metiers, histoire, naturalisme, langues, psychologie, trouver objet cache, une competence sociale, deux competences joker ;
+Artiste scenique ;APP;NA;9;70;arts et metiers , ecouter, imposture, psychologie, deux competences sociales, deux competences joker ;(comedie, chant, humour, etc.)
+Athlete ;DEX;FOR;9;70;combat rapproche, equitation, grimper, lancer, nager, sauter, une competence sociale, une competence joker; (corps a corps),
+Avocat ;EDU;NA;30;80;bibliotheque, comptabilite, droit, psychologie, deux competences sociales, deux competences joker;
+Barman ;APP;NA;8;25;combat rapproche , comptabilite, ecouter, psychologie, trouver objet cache, deux competences sociales, une competence joker ;(corps a corps)
+Baroudeur ;DEX;FOR;5;20;combat a distance, ecouter, naturalisme, orientation, pister, premiers soins, survie, trouver objet cache;
+Bibliothecaire [Lovecraftienne] ;EDU;NA;9;35;bibliotheque, comptabilite, langue maternelle, langues, quatre competences joker;
+Boxeur/Lutteur ;FOR;NA;9;60;combat rapproche , esquive, intimidation, psychologie, sauter, trouver objet cache, deux competences joker;(corps a corps)
+Braqueur de Banque;FOR;DEX;5;75;combat a distance, combat rapproche, conduite engin lourd, conduite, crochetage, electricite, mecanique, intimidation, une competence joker ;
+Cambrioleur;DEX;NA;5;40;crochetage, discretion, ecouter, electricite, mecanique, estimation, grimper, pickpocket, trouver objet cache;
+Cascadeur ;FOR;DEX;10;50;combat rapproche, electricite, mecanique, esquive, grimper, nager, premiers soins, sauter,conduite, equitation, pilotage, plongee; une competence parmi : conduite, equitation, pilotage, plongee
+Chasseur de prime ;DEX;FOR;9;30;combat rapproche, combat a distance, conduite, discretion, droit, electronique, electricite, pister, psychologie, une competence sociale  ;
+Chasseur professionnel ;DEX;FOR;20;50;combat a distance, discretion, ecouter, trouver objet cache, langues, survie, naturalisme, orientation, pister, sciences; (biologie, botanique)
+Chef Mafieux;APP;NA;60;95;combat a distance, combat rapproche, droit, ecouter, psychologie, trouver objet cache, deux competences sociales ;
+Chercheur ;EDU;NA;9;30;bibliotheque, histoire, langues, trouver objet cache, une competence sociale, trois competences joker;trois champs de recherche 
+Comedien ;APP;NA;9;90;arts et metiers , combat rapproche, histoire, imposture, psychologie, deux competences sociales, une competence joker;(comedie)
+Commerçant ;APP;DEX;20;40;comptabilite, ecouter, electricite, mecanique, psychologie, trouver objet cache, deux competences sociales  ;
+Comptable;EDU;NA;30;70;bibliotheque, comptabilite, droit, ecouter, persuasion, trouver objet cache, deux competences joker ;(comme informatique)
+Conducteur ;DEX;NA;10;40;conduite, ecouter, mecanique, orientation, trouver objet cache, deux competences sociales, une competence joker;
+Conservateur ;EDU;NA;10;30;archeologie, bibliotheque, comptabilite, estimation, histoire, langues, occultisme, trouver objet cache;
+Contrebandier;DEX;NA;5;40;combat a distance, conduite, pilotage , ecouter, orientation, pickpocket, psychologie, trouver objet cache, une competence sociale  ;(avions, bateaux)
+Correspondant ;EDU;NA;10;40;ecouter, histoire, langue maternelle, langues, psychologie, deux competences sociales, une competence joker;
+Cow-boy ;DEX;FOR;9;20;combat rapproche, combat a distance, equitation, esquive, lancer, pister, premiers soins, naturalisme, sauter, survie ;
+Criminel Independant;DEX;APP;5;65;arts et metiers , imposture, combat rapproche, combat a distance, crochetage, mecanique, discretion, estimation, psychologie, trouver objet cache, une competence sociale ;(comedie)
+Croque-mort ;EDU;NA;20;40;comptabilite, conduite, histoire, occultisme, psychologie, sciences, une competence sociale ; (biologie)(chimie), 
+Deprogrammeur [Moderne] ;EEDU;NA;20;50;combat rapproche, combat a distance, conduite, discretion, histoire, occultisme, psychologie, deux competences sociales ; (corps a corps)
+Detective d'agence ;FOR;DEX;20;45;bibliotheque, combat a distance, combat rapproche , discretion, droit, pister, psychologie, une competence sociale ;(corps a corps)
+Detective prive ;DEX;FOR;9;30;arts et metiers , bibliotheque, droit, imposture, psychologie, trouver objet cache, une competence sociale, une competence joker ;(photographie)
+Dilettante [Lovecraftienne] ;APP;NA;50;99;arts et metiers, combat a distance, equitation, langues, une competence sociale, trois competences joker;
+Domestique;EDU;NA;9;40;arts et metiers, comptabilite, estimation, ecouter, langues, premiers soins, psychologie, trouver objet cache, deux competences joker ; (cuisine, confection, barbier, etc.)
+Dresseur ;APP;POU;10;40;discretion, ecouter, naturalisme, pister, psychologie, sauter, sciences , une competence joker ;(zoologie)
+ecrivain [Lovecraftienne] ;EDU;NA;9;30;arts et metiers , bibliotheque, histoire, langue maternelle, langues, naturalisme, occultisme, psychologie, une competence joker;(litterature)
+editeur ;EDU;NA;10;30;comptabilite, histoire, langue maternelle, psychologie, trouver objet cache, deux competences sociales, une competence joker;
+Employe ;EDU;NA;9;80;bibliotheque, informatique, comptabilite, droit, ecouter, langues, une competence sociale, deux competences joker;
+Espion ;APP;DEX;20;60;arts et metiers , imposture, combat a distance, discretion, ecouter, langues, pickpocket, psychologie, deux competences sociales ;(comedie)
+etudiant/Stagiaire ;EDU;NA;5;10;bibliotheque, ecouter, langues, langue maternelle, trois champs d'etude, deux competences joker;
+Explorateur [Classique] ;APP;FOR;55;80;combat a distance, grimper, nager, histoire, langues, naturalisme, orientation, sauter, survie  ;
+Fanatique ;APP;POU;0;30;discretion, histoire, psychologie, deux competences sociales, trois competences joker;
+Faussaire;EDU;NA;20;60;arts et metiers , bibliotheque, comptabilite, estimation, histoire, pickpocket, trouver objet cache, une competence joker;(contrefaçon)
+Frangine;APP;NA;10;80;arts et metiers, combat rapproche , combat a distance , conduite, discretion, ecouter, deux competences sociales, une competence joker;(corps a corps) (armes de poing)
+Gardien de zoo ;EDU;NA;9;40;comptabilite, dressage, esquive, medecine, naturalisme, premiers soins, sciences; (pharmacologie) (zoologie)
+Gentilhomme/Dame ;APP;NA;40;90;arts et metiers, combat a distance, equitation, histoire, langues, orientation, deux competences sociales ; (fusils)
+Gourou ;APP;NA;30;60;comptabilite, occultisme, psychologie, trouver objet cache, deux competences sociales, deux competences joker;
+Hobo;APP;DEX;0;5;arts et metiers, crochetage, pickpocket, discretion, ecouter, grimper, orientation, sauter, une competence joker ;
+Homme politique ;APP;NA;50;90;baratin, charme, ecouter, histoire, intimidation, langue maternelle, persuasion, psychologie;
+Infirmier ;EDU;NA;9;30;ecouter, medecine, premiers soins, psychologie, sciences , trouver objet cache, une competence sociale  ;(biologie) (chimie)
+Informaticien [Moderne] ;EDU;NA;10;70;bibliotheque, electricite, electronique, informatique, trouver objet cache, une competence sociale, deux competences joker;
+Joueur professionnel ;APP;DEX;8;50;arts et metiers, comptabilite, ecouter, pickpocket, psychologie, trouver objet cache, deux competences sociales ; (comedie)
+Journaliste [Lovecraftienne] ;EDU;NA;9;30;arts et metiers, bibliotheque, histoire, langue maternelle, psychologie, une competence sociale, deux competences joker.; (art, photographie)
+Juge ;EDU;NA;50;80;bibliotheque, droit, ecouter, histoire, intimidation, langue maternelle, persuasion, psychologie;
+Laborantin ;EDU;NA;10;30;electricite, informatique, bibliotheque, langues, sciences, trouver objet cache, une competence joker; (chimie et deux autres)
+Libraire ;EDU;NA;20;40;comptabilite, estimation, conduite, histoire, bibliotheque, langue maternelle, langues, une competence sociale ;
+Mafieux;DEX;FOR;9;20;combat a distance, combat rapproche, conduite, psychologie, deux competences sociales, deux competences joker;
+Marchand d'antiquites ;EDU;NA;30;50;bibliotheque, comptabilite, conduite, estimation, histoire, orientation, deux competences sociales ;
+Marin ;DEX;FOR;9;40;mecanique, nager, naturalisme, orientation, pilotage, premiers soins, trouver objet cache, une competence sociale ; (bateaux)
+Mecanicien ;EDU;NA;9;40;arts et metiers, conduite engin lourd, conduite, electricite, grimper, mecanique, deux competences joker; (charpenterie, soudure, plomberie, etc.)
+Medecin [Lovecraftienne];EDU;NA;30;80;langues, medecine, premiers soins, psychologie, sciences , deux competences joker; (latin) (biologie et pharmacologie),
+Medecin legiste ;EDU;NA;40;60;bibliotheque, langues, medecine, persuasion, sciences , trouver objet cache; (latin) (biologie)  (criminalistique)(pharmacologie)
+Missionnaire ;APP;NA;0;30;arts et metiers, mecanique, medecine, naturalisme, premiers soins, une competence sociale, deux competences joker;
+Musicien;APP;DEX;9;30;arts et metiers , ecouter, psychologie, une competence sociale, quatre competences joker;(instrument)
+Occultiste [Lovecraftienne] ;EDU;NA;9;65;anthropologie, bibliotheque, histoire, langues, occultisme, sciences, une competence sociale, une competence joker ; (astronomie)
+Officier ;DEX;FOR;20;70;combat a distance, comptabilite, orientation, premiers soins, psychologie, deux competences sociales, une competence joker;
+Ouvrier ;DEX;FOR;9;30;combat rapproche, conduite engin lourd, conduite, electricite, lancer, mecanique, premiers soins, une competence joker;
+Parapsychologue ;EDU;NA;9;30;anthropologie, arts et metiers , bibliotheque, histoire, langues, occultisme, psychologie, une competence joker;(photographie)
+Petite Frappe;DEX;FOR;3;10;combat a distance, combat rapproche, discretion, grimper, lancer, pickpocket, sauter, une competence sociale ;
+Pharmacien ;EDU;NA;35;75;bibliotheque, comptabilite, langues, premiers soins, psychologie, sciences, une competence sociale ; (latin) (chimie)(pharmacologie),
+Photographe ;EDU;NA;9;30;arts et metiers , discretion, psychologie, sciences, trouver objet cache, une competence sociale, deux competences joker;(photographie) (chimie)
+Pilote/Aviateur ;EDU;FOR;20;70;comptabilite, ecouter, electricite, mecanique, orientation, pilotage, trouver objet cache, une competence joker ; (avions)
+Plongeur ;DEX;NA;9;30;mecanique, nager, pilotage, plongee, premiers soins, sciences, trouver objet cache, une competence joker; (bateaux) (biologie)
+Policier/Inspecteur [Lovecraftienne] ;DEX;FOR;20;70;arts et metiers, imposture, combat a distance, droit, ecouter, psychologie, trouver objet cache, une competence sociale, une competence joker.; (comedie)
+Pompier ;DEX;FOR;9;30;conduite engin lourd, conduite, esquive, grimper, lancer, mecanique, premiers soins, sauter;
+Professeur [Lovecraftienne] ;EDU;NA;20;70;bibliotheque, langue maternelle, langues, psychologie, quatre competences joker;
+Prospecteur ;DEX;FOR;0;10;grimper, histoire, mecanique, orientation, premiers soins, sciences, trouver objet cache, une competence joker; (geologie)
+Prostituee ;APP;NA;5;50;arts et metiers, discretion, esquive, pickpocket, psychologie, deux competences sociales, une competence joker ;
+Psychiatre ;EDU;NA;30;80;ecouter, langues, medecine, persuasion, psychanalyse, psychologie, sciences; (biologie)(chimie)
+Psychologue/Psychanalyste ;EDU;NA;10;40;bibliotheque, comptabilite, ecouter, persuasion, psychanalyse, psychologie, deux competences joker;
+Receleur;APP;NA;20;40;arts et metiers, bibliotheque, comptabilite, estimation, histoire, trouver objet cache, une competence sociale, une competence joker; (contrefaçon)
+Religieux ;EDU;NA;9;60;bibliotheque, comptabilite, ecouter, histoire, langues, psychologie, une competence sociale, une competence joker;
+Routier;DEX;FOR;9;20;comptabilite, conduite, ecouter, mecanique, orientation, psychologie, une competence sociale, une competence joker;
+Sauvage ;DEX;FOR;0;15;combat rapproche, lancer, ecouter, grimper, nager, naturalisme, occultisme, survie, trouver objet cache;
+Scientifique ;EDU;NA;9;50;informatique, bibliotheque, langue maternelle, langues, trouver objet cache, une competence sociale, trois competences joker;scientifique
+Secretaire ;DEX;APP;9;30;arts et metiers, bibliotheque, informatique, comptabilite, langue maternelle, psychologie, deux competences sociales, une competence joker ; (taper a la machine, dactylographie)
+Serveuse ;DEX;APP;9;20;arts et metiers, comptabilite, ecouter, esquive, psychologie, deux competences sociales, une competence joker;
+Soldat ;DEX;FOR;9;30;combat a distance, combat rapproche, discretion, esquive, grimper, nager, survie, langues, mecanique, premiers soins; deux competences parmi : langues, mecanique, premiers soins
+Styliste ;EDU;NA;20;60;arts et metiers, arts et metiers, comptabilite, informatique, bibliotheque, mecanique, psychologie, trouver objet cache, une competence joker; (photographie)
+Surveillant d'asile ;FOR;DEX;8;20;combat rapproche , discretion, ecouter, esquive, premiers soins, psychologie, deux competences sociales ;(corps a corps)
+Syndicaliste ;EDU;NA;5;30;combat rapproche, comptabilite, conduite engin lourd, droit, ecouter, psychologie, deux competences sociales ; (corps a corps)
+Trafiquant;FOR;NA;5;30;combat a distance, combat rapproche, conduite, discretion, psychologie, trouver objet cache, deux competences sociales ; (corps a corps)
+Tueur a Gage;DEX;FOR;30;60;combat a distance, combat rapproche, crochetage, discretion, electricite, imposture, mecanique, psychologie;
+Vagabond ;APP;DEX;0;5;discretion, ecouter, grimper, orientation, sauter, une competence sociale, deux competences joker;
+Vendeur ;APP;NA;9;40;comptabilite, conduite, discretion, pickpocket, ecouter, psychologie, deux competences sociales, une competence joker;
