@@ -2,6 +2,9 @@
 require(shinydashboard)
 require(stringr)
 require(DT)
+require(staplr)
+require(hms)
+require(animation)
 #staplr for pdf form fill up (must install some software so not shiny)
 
 rollDice<-function(dice=6,nbr=1,sum=F){
@@ -14,6 +17,14 @@ occupation<-read.csv2(file = "Occupation.csv",encoding = "ANSI") #HERE
 names<-read.csv2(file = "Names.csv",encoding = "ANSI")
 attache<-read.csv2(file = "Attaches.csv",encoding = "ANSI")
 armes<-read.csv2(file = "Armes.csv",encoding = "ANSI")
+fieldsbase<-get_fields(input_filepath = "fichebase.pdf")
+fichesession<-{
+  time<-Sys.time()
+  time<-str_remove_all(as.hms(time),pattern = ":")
+  paste("fiche_",time,".pdf",sep = "")
+}
+
+
 ui <- dashboardPage(
   dashboardHeader(title = "Character Generator"),
   ## Sidebar content
@@ -22,7 +33,8 @@ ui <- dashboardPage(
       menuItem("Stats", tabName = "Stats", icon = icon("calculator")),
       menuItem("Job", tabName = "Job", icon = icon("user-md")),
       menuItem("Personal", tabName = "Personal", icon = icon("user")),
-      menuItem("Equipment", tabName = "Equipment", icon = icon("bomb"))
+      menuItem("Equipment", tabName = "Equipment", icon = icon("bomb")),
+      menuItem("Generator", tabName = "Generator", icon = icon("cogs"))
     )
   ),
   ## Body content
@@ -124,6 +136,9 @@ ui <- dashboardPage(
                       column(width = 6, selectInput(inputId = "WeaponCategory",label = "Period",choices =unique(armes$Category))),
                       column(width = 12,DTOutput(outputId = "WeaponTable")))
                       )
+              ),
+      tabItem(tabName = "Generator",
+              actionButton(inputId = "CreatePDF",label = "Generate PDF")
               )
     )
   )
@@ -131,6 +146,112 @@ ui <- dashboardPage(
 
 server <- function(input, output,session) {
   
+  output$pdfviewer <- renderText({
+    return(paste('<iframe style="height:600px; width:100%" src="', fichesession, '"></iframe>', sep = ""))
+  })
+  
+  
+  output$Character.pdf <- downloadHandler(
+    filename = function() {
+      paste("fiche", "pdf", sep=".")
+    },
+    
+    content = function(file) {
+      file.copy(fichesession, file)
+    },
+    contentType = "pdf"
+  )
+  
+  observeEvent(eventExpr = input$CreatePDF,{
+    
+    Stats<-c(FOR=floor(as.integer(input$DiceFOR)*5),CON=floor(as.integer(input$DiceCON)*5),DEX=floor(as.integer(input$DiceDEX)*5),
+             TAI=floor(as.integer(input$DiceTAI)*5),INT=floor(as.integer(input$DiceINT)*5),EDU=floor(as.integer(input$DiceEDU)*5),
+             APP=floor(as.integer(input$DiceAPP)*5),POU=floor(as.integer(input$DicePOU)*5),Chance=floor(as.integer(input$DiceChance)*5))
+    appAgeMod<-ceiling(as.numeric(as.character(cut(as.numeric(input$Age), breaks=c(0, 25, 40, 50, 60, 70,80,750),labels = c(0,-0.1,-5,-10,-15,-20,-25)))))
+    
+    Stats["APP"]<-Stats["APP"]+appAgeMod
+    Stats["FOR"]<-Stats["FOR"]-input$ageFOR
+    Stats["DEX"]<-Stats["DEX"]-input$ageDEX
+    Stats["CON"]<-Stats["CON"]-input$ageCON
+    Stats["EDU"]<-Stats["EDU"]+input$ageEDU
+    
+    res<-data.frame()
+    res<-rbind(res,SAN=floor(as.integer(input$DicePOU)*5)) #SAN
+    res<-rbind(res,PDV=floor(((floor(as.integer(input$DiceCON)*5)-input$ageCON)+floor(as.integer(input$DiceTAI)*5))/10))#PDV
+    res<-rbind(res,SAN=floor(as.integer(input$DicePOU)))#MAG
+    
+    if(floor(as.integer(input$DiceFOR)*5)-input$ageFOR<floor(as.integer(input$DiceTAI)*5)){
+      if(floor(as.integer(input$DiceDEX)*5)-input$ageDEX<floor(as.integer(input$DiceTAI)*5)){
+        MVT<-7
+      }else{
+        MVT<-8
+      }
+    }else{
+      if(floor(as.integer(input$DiceDEX)*5)-input$ageDEX>floor(as.integer(input$DiceTAI)*5)){
+        MVT<-9
+      }else{
+        MVT<-8
+      }
+    }
+    
+    if((floor(as.integer(input$DiceFOR)*5)-input$ageFOR+floor(as.integer(input$DiceTAI)*5))<65){
+      CAR<- "-2"
+    }else{
+      CAR<-as.character(ceiling(((floor(as.integer(input$DiceFOR)*5)-input$ageFOR+floor(as.integer(input$DiceTAI)*5))-125)/40))
+    }
+    
+    IMP<-as.character(cut(as.numeric(CAR), breaks=c(-2, -1, 0, 1, 2, 3, 4, 5,6),labels = c("-2","-1","0","1D4","1D6","2D6","3D6","4D6"),right = F))
+    ESQ<-as.character(floor(((as.integer(input$DiceDEX)*5)-input$ageDEX)/2))
+    
+    fields<-fieldsbase
+    fields$Nom$value<-paste(input$FirstName,input$LastName)
+    fields$Occupation$value<-input$Occupation
+    fields$Sexe$value<-input$Gender
+    # fields$`Esp&#232;ces`$value
+    # fields$capital$value
+    # fields$depencesCourantes$value
+    fields$POU_0$value<-Stats["POU"] #_1 _2
+    fields$CON_0$value<-Stats["CON"]
+    fields$APP_0$value<-Stats["APP"]
+    fields$EDU_0$value<-Stats["EDU"]
+    fields$FOR_0$value<-Stats["FOR"]
+    fields$TAI_0$value<-Stats["TAI"]
+    fields$INT_0$value<-Stats["INT"]
+    fields$DEX_0$value<-Stats["DEX"]
+    fields$age$value<-input$Age
+    fields$MVT$value<-MVT
+    fields$pv_max$value<-res[2,]
+    fields$pm_max$value<-res[3,]
+    fields$sm_initial$value<-res[1,]
+    fields$sm_max$value<-res[1,]
+    fields$CHANCE$value<-Stats["Chance"]
+    fields$impact$value<-IMP
+    fields$carrure$value<-CAR
+    fields$ESQ$value<-ESQ
+  
+    showModal(modalDialog(
+      title = "",footer = NULL,
+      "Your character is being created.",
+      "Please wait ..."
+    ))
+    set_fields(input_filepath = "fichebase.pdf",output_filepath = fichesession,fields = fields)
+    removeModal()
+    showModal(modalDialog(
+      title = "PDF Generation",
+      "Your character sheet has been created",
+      downloadLink('Character.pdf', 'Download'),footer = actionButton(inputId = "PDFClose",label = "Dismiss")
+    ))
+    
+  })
+  observeEvent(eventExpr = input$PDFClose,{
+    file.remove(fichesession)
+    fichesession<-{
+      time<-Sys.time()
+      time<-str_remove_all(as.hms(time),pattern = ":")
+      paste("fiche_",time,".pdf",sep = "")
+    }
+    removeModal()
+  })
   output$WeaponTable<-renderDT({
     
     temp<-armes[armes$Category==input$WeaponCategory,]
@@ -232,7 +353,7 @@ server <- function(input, output,session) {
     if(is.na(IMP)) IMP<-"5D6"
     res<-data.frame(CAR,stringsAsFactors = F) #CAR
     res<-rbind(res,IMP)#IMP
-    res<-rbind(res,as.character(floor(((as.integer(input$DiceDEX)*5)-input$ageDEX)/2)))#MAG
+    res<-rbind(res,as.character(floor(((as.integer(input$DiceDEX)*5)-input$ageDEX)/2)))#DEX
     rownames(res)<-c("Carrure","Impact","Esquive")
     colnames(res)<-c("Derived")
     res

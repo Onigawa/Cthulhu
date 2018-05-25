@@ -1,7 +1,0 @@
-occupation<-read.csv2(file = "Occupation.csv")
-occupation$X<-NULL
-write.csv2(x = occupation,file = "Occupation.csv",row.names = F)
-
-
-
-                    
