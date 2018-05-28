@@ -24,7 +24,7 @@ attache<-read.csv2(file = "Attaches.csv",encoding = "ANSI")
 armes<-read.csv2(file = "Armes.csv",encoding = "ANSI")
 fieldsbase<-get_fields(input_filepath = "fichebase.pdf")
 codepdf<-read.csv2(file = "CodePDF.csv",encoding = "ANSI")
-
+fieldsDone<-NULL
 
 fichesession<-{
   time<-Sys.time()
@@ -97,8 +97,7 @@ ui <- dashboardPage(
                   fluidRow(
                     column(width = 3, checkboxInput("Recommanded","Show Only Recommanded",value = F)),
                     column(width = 6,selectInput(inputId = "Occupation",label = "Occupation",choices = occupation$Occupation)),
-                    column(width = 6,htmlOutput(outputId = "InterestPoint")),
-                    column(width = 6,htmlOutput(outputId = "OccupationPoint"))
+                    column(width = 12,tableOutput(outputId = "TotalPoints"),align="center")
                   )
               ),
               box(title = "Credit",width=6,
@@ -109,11 +108,12 @@ ui <- dashboardPage(
                   )
               ),
               box(title = "Skills",width=6,
-                  tableOutput(outputId = "SkillTable"),
+                  tableOutput(outputId = "SkillTableValue"),
                   checkboxInput(inputId = "SkillOnly",label = "Only Available Skill",value = T),
                   selectInput(inputId = "SkillChoose",label = "What Skill ?",choices = "Placeholder" ),
                   numericInput(inputId = "SkillValue",label = "Skill Value",value = 0,min = 0,max = 100),
-                  actionButton(inputId = "SkillValueSave",label = "Validate")
+                  actionButton(inputId = "SkillValueSave",label = "Validate"),
+                  actionButton(inputId = "SkillReset",label = "Reset all")
               )
               
       ),
@@ -158,22 +158,35 @@ ui <- dashboardPage(
 
 server <- function(input, output,session) {
   fields<-fieldsbase
+  
+  observeEvent(input$SkillReset,{
+    
+    fields<<-fieldsbase
+    fieldsDone<<-NULL
+    showModal(modalDialog(title = "Confirmation",easyClose = T,footer=NULL,
+                          "All skills have been reset"
+                          ))
+  })
+  
   observeEvent(input$SkillValueSave,{
     
     skillcode<-as.character(codepdf[codepdf$Name==input$SkillChoose,"Code"])
-    if(length(skillcode)==0){
+    if(length(skillcode)==0 || is.null(skillcode)){
       showModal(modalDialog(title = "Error",easyClose = T,footer = NULL,
               "This skill isn't found"
                             
       ))
+    }else{
+      fields[[skillcode]]$value<<-as.character(input$SkillValue)
+      fieldsDone<<-c(fieldsDone,input$SkillChoose)
+      fieldsDone<<-fieldsDone[!duplicated(fieldsDone)] 
+      showModal(modalDialog(title = "Confirmation",easyClose = T,footer = NULL,
+                            paste(input$SkillChoose,"has been set to",input$SkillValue)
+                            
+      ))
     }
     
-    fields[[skillcode]]$value<<-as.character(input$SkillValue)
-    
-    showModal(modalDialog(title = "Confirmation",easyClose = T,footer = NULL,
-      paste(input$SkillChoose,"has been set to",input$SkillValue)
-        
-    ))
+
   })
   
   
@@ -249,6 +262,7 @@ server <- function(input, output,session) {
     fields$TAI_0$value<-Stats["TAI"]
     fields$INT_0$value<-Stats["INT"]
     fields$DEX_0$value<-Stats["DEX"]
+    fields$CRE_0$value<-input$Credit
     fields$age$value<-input$Age
     fields$MVT$value<-MVT
     fields$pv_max$value<-res[2,]
@@ -433,6 +447,49 @@ server <- function(input, output,session) {
     paste("<b>Occupation Points </b> :",points)
   })
   
+  output$TotalPoints<-renderTable({
+    input$SkillValueSave
+    input$Credit
+    input$SkillReset
+    points<-(floor(as.integer(input$DiceEDU)*5)+input$ageEDU)*2
+    job<-occupation[occupation$Occupation==input$Occupation,]
+    JobCategory<-as.character(job$Skill1)
+    appAgeMod<-ceiling(as.numeric(as.character(cut(as.numeric(input$Age), breaks=c(0, 25, 40, 50, 60, 70,80,750),labels = c(0,-0.1,-5,-10,-15,-20,-25)))))
+    switch (JobCategory,
+            "EDU" = points<-points+2*(floor(as.integer(input$DiceEDU)*5)+input$ageEDU),
+            "FOR" = points<-points+2*(floor(as.integer(input$DiceFOR)*5)-input$ageFOR),
+            "INT" = points<-points+2*(floor(as.integer(input$DiceINT)*5)),
+            "POU" = points<-points+2*(floor(as.integer(input$DicePOU)*5)),
+            "APP" = points<-points+2*(floor(as.integer(input$DiceAPP)*5)+appAgeMod),
+            "DEX" = points<-points+2*(floor(as.integer(input$DiceDEX)*5)-input$ageDEX)
+    )
+    points1<-points
+    JobCategory<-as.character(job$Skill2)
+    points<-(floor(as.integer(input$DiceEDU)*5)+input$ageEDU)*2
+    if(!is.na(JobCategory)){
+      switch (JobCategory,
+              "EDU" = points<-points+2*(floor(as.integer(input$DiceEDU)*5)+input$ageEDU),
+              "FOR" = points<-points+2*(floor(as.integer(input$DiceFOR)*5)-input$ageFOR),
+              "INT" = points<-points+2*(floor(as.integer(input$DiceINT)*5)),
+              "POU" = points<-points+2*(floor(as.integer(input$DicePOU)*5)),
+              "APP" = points<-points+2*(floor(as.integer(input$DiceAPP)*5)-input$ageAPP),
+              "DEX" = points<-points+2*(floor(as.integer(input$DiceDEX)*5)-input$ageDEX)
+      )
+      
+    }
+    if(points1>points) points<-points1
+    temp<-fieldsDone
+    codes<-as.character(sapply(X = fieldsDone,FUN = function(x) codepdf[codepdf$Name==x,"Code"]))
+    val<-sapply(X=codes,FUN=function(x) fields[[x]]$value)
+    temp<-cbind(temp,val)
+    temp<-as.data.frame(temp)
+    
+   temp<- temp[order(temp$temp),] 
+    table<-data.frame(Occupation_Point=points,Interest_Point=floor(as.integer(input$DiceINT)*5)*2,Total_points=points+floor(as.integer(input$DiceINT)*5)*2-input$Credit -sum(as.numeric(as.character(temp$val))))
+colnames(table)<-c("Occupation Points","Interest Points", "Total Points")
+table
+  },colnames = T)
+  
   output$CreditTable<-renderTable({
 
     if(input$Period=="Classic"){
@@ -492,7 +549,27 @@ server <- function(input, output,session) {
     res
   },digits = 1)
   
-  output$SkillTable<-renderTable(expr = {str_to_title(strsplit(as.character(occupation[occupation$Occupation==input$Occupation,"Skills"]),", ")[[1]])},colnames = F)
+  # output$SkillTable<-renderTable(expr = {
+  #   temp<-input$SkillValueSave
+  #   temp<-str_to_title(strsplit(as.character(occupation[occupation$Occupation==input$Occupation,"Skills"]),", ")[[1]])
+  #   
+  #   temp<-temp[!(temp %in% fieldsDone)]
+  #   
+  #   },colnames = F)
+  
+  output$SkillTableValue<-renderTable(expr = {
+    input$SkillValueSave
+    input$SkillReset
+    temp<-fieldsDone
+    codes<-as.character(sapply(X = fieldsDone,FUN = function(x) codepdf[codepdf$Name==x,"Code"]))
+    val<-sapply(X=codes,FUN=function(x) fields[[x]]$value)
+    temp<-cbind(temp,val)
+    temp<-as.data.frame(temp)
+    
+    temp[order(temp$temp),] 
+    
+  },colnames = F)
+  
   
   observeEvent({input$Occupation
     input$SkillOnly},{
