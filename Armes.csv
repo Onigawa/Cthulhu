@@ -1,6 +1,6 @@
 Name;Base;Damage;Range;Attacks per round;Ammo;Resistance;Cost;Mal;Era;Category
 Punch / Fist;50;1d3+IMP;-;1    ;-;-;-;-;all;Unarmed
-HeaIMPutt;10;1D4+IMP;-;1    ;-;-;-;-;all;Unarmed
+Headbutt;10;1D4+IMP;-;1    ;-;-;-;-;all;Unarmed
 Kick;25;1D6;-;1    ;-;-;-;-;all;Unarmed
 Rapier / Heavy Epee;10;1D6+1+IMP;touch;1    ;-;15;-;-;all;Hand to Hand Weapons
 Cavalier Sabre;15;1D8+1+IMP;touch;1    ;-;20;-;-;all;Hand to Hand Weapons

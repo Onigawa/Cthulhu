@@ -160,8 +160,14 @@ server <- function(input, output,session) {
   fields<-fieldsbase
   observeEvent(input$SkillValueSave,{
     
-    #browser()
     skillcode<-as.character(codepdf[codepdf$Name==input$SkillChoose,"Code"])
+    if(length(skillcode)==0){
+      showModal(modalDialog(title = "Error",easyClose = T,footer = NULL,
+              "This skill isn't found"
+                            
+      ))
+    }
+    
     fields[[skillcode]]$value<<-as.character(input$SkillValue)
     
     showModal(modalDialog(title = "Confirmation",easyClose = T,footer = NULL,
