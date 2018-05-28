@@ -7,7 +7,9 @@ require(hms)
 require(animation) #to load pdf reader software
 #Pictures 
 #Skills check
-
+#get("value", eval(as.symbol(""))))
+#test<-"ORI_0"
+#fieldsbase[[test]]$value<-"88"
 
 
 rollDice<-function(dice=6,nbr=1,sum=F){
@@ -155,6 +157,19 @@ ui <- dashboardPage(
 )
 
 server <- function(input, output,session) {
+  fields<-fieldsbase
+  observeEvent(input$SkillValueSave,{
+    
+    #browser()
+    skillcode<-as.character(codepdf[codepdf$Name==input$SkillChoose,"Code"])
+    fields[[skillcode]]$value<<-as.character(input$SkillValue)
+    
+    showModal(modalDialog(title = "Confirmation",easyClose = T,footer = NULL,
+      paste(input$SkillChoose,"has been set to",input$SkillValue)
+        
+    ))
+  })
+  
   
   output$pdfviewer <- renderText({
     return(paste('<iframe style="height:600px; width:100%" src="', fichesession, '"></iframe>', sep = ""))
@@ -213,7 +228,7 @@ server <- function(input, output,session) {
     IMP<-as.character(cut(as.numeric(CAR), breaks=c(-2, -1, 0, 1, 2, 3, 4, 5,6),labels = c("-2","-1","0","1D4","1D6","2D6","3D6","4D6"),right = F))
     ESQ<-as.character(floor(((as.integer(input$DiceDEX)*5)-input$ageDEX)/2))
     
-    fields<-fieldsbase
+    fields<-fields
     fields$Nom$value<-paste(input$FirstName,input$LastName)
     fields$Occupation$value<-input$Occupation
     fields$Sexe$value<-input$Gender
