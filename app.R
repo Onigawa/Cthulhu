@@ -96,25 +96,31 @@ ui <- dashboardPage(
               box(title = "Points",width = 12,
                   fluidRow(
                     column(width = 3, checkboxInput("Recommanded","Show Only Recommanded",value = F)),
-                    column(width = 6,selectInput(inputId = "Occupation",label = "Occupation",choices = occupation$Occupation)),
-                    column(width = 12,tableOutput(outputId = "TotalPoints"),align="center")
+                    column(width = 4,selectInput(inputId = "Occupation",label = "Occupation",choices = occupation$Occupation)),
+                    column(width = 5,tableOutput(outputId = "TotalPoints"),align="center")
                   )
+              ),              box(title = "Skills",width=12,
+                                  fluidRow(
+                                    column(width = 12,tableOutput(outputId = "SkillTableValue"),align="center"),
+                                    
+                                    column(width = 4,htmlOutput(outputId = "SkillJoker")),
+                                    column(width = 4,checkboxInput(inputId = "SkillOnly",label = "Only Profession Skill",value = T)),
+                                    column(width = 4,htmlOutput(outputId = "SkillSocial")),
+                                    column(width = 6,selectInput(inputId = "SkillChoose",label = "Skill to affect value",choices = "Placeholder" )),
+                                    column(width = 6,numericInput(inputId = "SkillValue",label = "Skill Value",value = 0,min = 0,max = 100)),
+                                    column(width = 3,actionButton(inputId = "SkillValueSave",label = "Validate")),
+                                    column(width = 3,actionButton(inputId = "SkillReset",label = "Reset all"))
+                                  )
+
               ),
-              box(title = "Credit",width=6,
+              box(title = "Credit",width=12,
                   fluidRow(
-                    column(width = 6,selectInput(inputId = "Period",label = "Period",choices = c("Classic","Modern"))),
-                    column(width = 6,numericInput(inputId = "Credit",label = "Credit",value = 10,min = 0,max = 90)),
-                    column(width = 12,tableOutput("CreditTable"))
+                    column(width = 4,selectInput(inputId = "Period",label = "Period",choices = c("Classic","Modern"))),
+                    column(width = 4,numericInput(inputId = "Credit",label = "Credit",value = 10,min = 0,max = 90)),
+                    column(width = 4,tableOutput("CreditTable"))
                   )
-              ),
-              box(title = "Skills",width=6,
-                  tableOutput(outputId = "SkillTableValue"),
-                  checkboxInput(inputId = "SkillOnly",label = "Only Available Skill",value = T),
-                  selectInput(inputId = "SkillChoose",label = "What Skill ?",choices = "Placeholder" ),
-                  numericInput(inputId = "SkillValue",label = "Skill Value",value = 0,min = 0,max = 100),
-                  actionButton(inputId = "SkillValueSave",label = "Validate"),
-                  actionButton(inputId = "SkillReset",label = "Reset all")
               )
+
               
       ),
       
@@ -158,6 +164,24 @@ ui <- dashboardPage(
 
 server <- function(input, output,session) {
   fields<-fieldsbase
+  
+  output$SkillJoker<-renderText({
+    input$SkillValueSave
+    input$SkillReset
+    social<-fieldsDone
+    social<-social[!(social %in% str_to_title(strsplit(as.character(occupation[occupation$Occupation==input$Occupation,"Skills"]),", ")[[1]]))]
+    left<-occupation[occupation$Occupation==input$Occupation,"Joker"]-length(social)
+    paste("<br><b>Joker Skills left </b>:",left,"<br><br>")
+  })
+  
+  output$SkillSocial<-renderText({
+    input$SkillValueSave
+    input$SkillReset
+    social<-fieldsDone[fieldsDone %in% c("Baratin","Persuasion","Charme","Intimidation")]
+    social<-social[!(social %in% str_to_title(strsplit(as.character(occupation[occupation$Occupation==input$Occupation,"Skills"]),", ")[[1]]))]
+    left<-occupation[occupation$Occupation==input$Occupation,"Sociale"]-length(social)
+    paste("<br><b>Social Skills left </b>:",left,"<br><br>")
+  })
   
   observeEvent(input$SkillReset,{
     
