@@ -1,4 +1,5 @@
 ## app.R ##
+require(dashboardthemes)
 require(shinydashboard)
 require(stringr)
 require(DT)
@@ -34,25 +35,38 @@ fichesession<-{
 
 
 ui <- dashboardPage(
-  dashboardHeader(title = "Character Generator"),
+  dashboardHeader(title = "Character Generator",
+                  tags$li(class = "dropdown",
+                  tags$li(class = "dropdown", textOutput("logged_user"), style = "padding-top: 15px; padding-bottom: 15px; color: #fff;"),
+                  tags$li(class = "dropdown", actionLink("CreatePDF", "Generate PDF")))
+  ),
   ## Sidebar content
   dashboardSidebar(
     sidebarMenu(
       menuItem("Stats", tabName = "Stats", icon = icon("calculator")),
       menuItem("Job", tabName = "Job", icon = icon("user-md")),
       menuItem("Personal", tabName = "Personal", icon = icon("user")),
-      menuItem("Equipment", tabName = "Equipment", icon = icon("bomb")),
-      menuItem("Generator", tabName = "Generator", icon = icon("cogs"))
+      menuItem("Equipment", tabName = "Equipment", icon = icon("bomb"))#,
+      #menuItem("Generator", tabName = "Generator", icon = icon("cogs"))
     )
   ),
   ## Body content
   dashboardBody(
+    shinyDashboardThemes(
+      theme = "poor_mans_flatly"
+    ),
     tabItems(
       # First tab content
       tabItem(tabName = "Stats",
+              tags$style(".topimg {
+                            margin-left:-60px;
+                         margin-right:-60px;
+                         margin-top:-30px;
+                         margin-bottom:10px;
+                         }"),
+                  div(class="topimg",img(src="Ecran2.jpg", width="100%")),
               
-              
-              box(title = "Input",width = 12,collapsible = T,
+              box(status="primary",title = "Input",width = 12,collapsible = T,
                   fluidRow(
                     column(width = 4,textInput(inputId = "DiceFOR",value = as.character(rollDice(nbr = 3,dice = 6,sum = T)),label = "FOR")),
                     column(width = 4,textInput(inputId = "DiceCON",value = as.character(rollDice(nbr = 3,dice = 6,sum = T)),label = "CON")),
@@ -71,7 +85,7 @@ ui <- dashboardPage(
                   ),
                   actionButton(inputId = "reroll",label = "Reroll")
               ),
-              box(title = "Age",width = 6,collapsible = T,
+              box(status="primary",title = "Age",width = 6,collapsible = T,
                   textInput(inputId = "Age",label = "Age",value = "25"),
                   htmlOutput("AgeDisplay"),
                   numericInput("ageFOR", "FOR", 0, min = 0, max = 100),
@@ -80,26 +94,33 @@ ui <- dashboardPage(
                   numericInput("ageEDU", "EDU points from tests :", 0, min = 0, max = 100)
               ),
               
-              box(title = "Values",width = 6,collapsible = T,
+              box(status="primary",title = "Values",width = 6,collapsible = T,
                   fluidRow(
                     column(width = 5,tableOutput("statsTable")),
                     column(width = 3,tableOutput("Derive")),
                     column(width = 3,tableOutput("DerivePhy"))
                   )
-              ),
-              actionButton(inputId = "DEBUG",label = "DEBUG")
+              )#,
+              #actionButton(inputId = "DEBUG",label = "DEBUG")
               
       ),
       
       # Second tab content
       tabItem(tabName = "Job",
-              box(title = "Points",width = 12,
+              tags$style(".topimg {
+                            margin-left:-60px;
+                         margin-right:-60px;
+                         margin-top:-30px;
+                         margin-bottom:10px;
+                         }"),
+              div(class="topimg",img(src="EcranV62.jpg", width="100%")),
+              box(status="primary",title = "Points",width = 12,
                   fluidRow(
                     column(width = 3, checkboxInput("Recommanded","Show Only Recommanded",value = F)),
                     column(width = 4,selectInput(inputId = "Occupation",label = "Occupation",choices = occupation$Occupation)),
                     column(width = 5,tableOutput(outputId = "TotalPoints"),align="center")
                   )
-              ),              box(title = "Skills",width=12,
+              ),              box(status="primary",title = "Skills",width=12,
                                   fluidRow(
                                     column(width = 12,tableOutput(outputId = "SkillTableValue"),align="center"),
                                     
@@ -113,7 +134,7 @@ ui <- dashboardPage(
                                   )
 
               ),
-              box(title = "Credit",width=12,
+              box(status="primary",title = "Credit",width=12,
                   fluidRow(
                     column(width = 4,selectInput(inputId = "Period",label = "Period",choices = c("Classic","Modern"))),
                     column(width = 4,numericInput(inputId = "Credit",label = "Credit",value = 10,min = 0,max = 90)),
@@ -125,7 +146,14 @@ ui <- dashboardPage(
       ),
       
       tabItem(tabName="Personal",
-               box(title = "Name",width = 12,
+              tags$style(".topimg {
+                            margin-left:-60px;
+                         margin-right:-60px;
+                         margin-top:-30px;
+                         margin-bottom:10px;
+                         }"),
+                  div(class="topimg",img(src="map.jpg", width="100%")),
+               box(status="primary",title = "Name",width = 12,
                    fluidRow(
                      column(width = 4,selectInput(inputId = "Gender",label = "Prefered Gender",choices = c("Male","Female","Random"))),
                      column(width = 4,textInput(inputId = "FirstName",label = "First Name",placeholder = "Jane")),
@@ -133,7 +161,7 @@ ui <- dashboardPage(
                      column(width = 3,actionButton(inputId = "RollName",label = "Random Name"))
                    )
                    ),
-              box(title = "Particular",width = 12,
+              box(status="primary",title = "Particular",width = 12,
                   fluidRow(
                     column(width = 4,textInput(inputId = "Croyance",label = "Believes",placeholder = "God")),
                     column(width = 4,textInput(inputId = "Personne",label = "Important person",placeholder = "Jane Smith")),
@@ -147,17 +175,27 @@ ui <- dashboardPage(
                
                ),
       tabItem(tabName = "Equipment",
+              tags$style(".topimg {
+                            margin-left:-60px;
+                         margin-right:-60px;
+                         margin-top:-30px;
+                         margin-bottom:10px;
+                         }"),
+                  div(class="topimg",img(src="Stand.jpg", width="100%")),
               
-                box(title = "Weapons",width=12,
+                box(status="primary",title = "Weapons",width=12,
                     fluidRow(
                       column(width = 6, selectInput(inputId = "WeaponPeriod",label = "Period",choices = c("all","1890s", "1920s","present","rare"),selected = "all")),
-                      column(width = 6, selectInput(inputId = "WeaponCategory",label = "Period",choices =unique(armes$Category))),
-                      column(width = 12,DTOutput(outputId = "WeaponTable")))
+                      column(width = 6, selectInput(inputId = "WeaponCategory",label = "Category",choices =unique(armes$Category))),
+                      column(width = 12,DTOutput(outputId = "WeaponTable"))
                       )
-              ),
-      tabItem(tabName = "Generator",
-              actionButton(inputId = "CreatePDF",label = "Generate PDF")
-              )
+                      )
+              ) #,
+      # tabItem(tabName = "Generator",
+      #         actionButton(inputId = "CreatePDF",label = "Generate PDF")
+      #         )
+     
+      
     )
   )
 )
@@ -326,7 +364,11 @@ server <- function(input, output,session) {
     temp<-armes[armes$Category==input$WeaponCategory,]
     res<-temp[sapply(X =temp$Era,FUN = grepl,pattern=input$WeaponPeriod ),]
     res<-rbind(res,temp[temp$Era=="all",])
-    res[!duplicated(res),]
+    datatable(res[!duplicated(res),], extensions = 'FixedColumns',
+                  options = list(
+                    scrollX = TRUE,
+                    fixedColumns = TRUE
+                  ))
   })
   
   observeEvent(eventExpr = input$RandomCharacteristics,{
@@ -467,7 +509,7 @@ server <- function(input, output,session) {
 
     }
     if(points1>points) points<-points1
-    points<-points-input$Credit
+    #points<-points-input$Credit
     paste("<b>Occupation Points </b> :",points)
   })
   
